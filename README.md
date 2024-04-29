@@ -7,3 +7,17 @@ Current dot files configurations.
 1. Find profile directory of your firefox. You can look it up via Help -> More trubleshooting information. There you can find the profile directory.
 2. With in the profile directory create a folder named chrome and there copy the userChrome.css.
 3. If this is not enough you have to enable the setting ' toolkit.legacyUserProfileCustomizations.stylesheets' by setting it true in the about:config.
+
+## Package Managers
+
+- for tmux: https://github.com/tmux-plugins/tpm
+- for fish: https://github.com/jorgebucaran/fisher
+
+## Dependencies
+- fzf
+- ripgrep
+- lazygit
+- bat
+- exa
+- fd
+
