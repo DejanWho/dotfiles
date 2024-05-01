@@ -13,6 +13,29 @@ Current dot files configurations.
 - for tmux: https://github.com/tmux-plugins/tpm
 - for fish: https://github.com/jorgebucaran/fisher
 
+### Fish packages
+
+#### Tokyo Night theme
+
+```shell
+fisher install axkirillov/tokyonight-fish
+```
+Add this to the config.fish to enable the theme:
+```shell
+theme_tokyonight storm
+```
+
+#### Install fishline
+
+```shell
+fisher install jorgebucaran/fishline
+```
+## Install alacritty themes
+```shell
+git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+```
+
+
 ## Dependencies
 - fzf
 - ripgrep

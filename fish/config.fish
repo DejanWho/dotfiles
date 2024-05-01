@@ -1,4 +1,10 @@
-# vim
+# Start ssh-agent on start of wsl2
+if test -z "$SSH_AUTH_SOCK"
+    eval (ssh-agent -c)
+    ssh-add ~/.ssh/id_rsa
+end
+
+### ALIASES ###
 alias vim='nvim'
 
 # Changing "ls" to "eza"
@@ -11,6 +17,9 @@ alias l.='eza -a | egrep "^\."'
 ### EXPORT ###
 set fish_greeting # Supresses fish's intro message
 set TERM xterm-256color # Sets the terminal type
+
+### Theme
+theme_tokyonight storm
 
 ### "nvim" as manpager
 set -x MANPAGER "nvim +Man!"
