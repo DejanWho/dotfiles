@@ -37,3 +37,7 @@ alias pscpu='ps auxf | sort -nr -k 3'
 
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
+
+function fish_prompt
+    fishline -s $status
+end
