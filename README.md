@@ -28,7 +28,7 @@ theme_tokyonight storm
 #### Install fishline
 
 ```shell
-fisher install jorgebucaran/fishline
+fisher install 0rax/fishline
 ```
 ## Install alacritty themes
 ```shell
