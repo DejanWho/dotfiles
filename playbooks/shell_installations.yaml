@@ -1,0 +1,14 @@
+---
+- name: Install tools via shell on ubuntu
+  hosts: localhost
+  become: yes
+  tasks:  
+    - name: Install Azure CLI
+      shell: curl -sL https://aka.ms/InstallAzureCLIDeb | sudo bash
+      args:
+        executable: /usr/bin/fish
+
+    - name: Install Rust
+      shell: curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
+      args:
+        executable: /usr/bin/fish
