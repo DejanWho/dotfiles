@@ -1,0 +1,30 @@
+---
+- name: Install tools via shell on ubuntu
+  hosts: localhost
+  tasks: 
+    - name: Clone dotfiles repository 
+      git:
+        repo: https://github.com/DejanWho/dotfiles.git
+        dest: "{{ ansible_env.HOME }}/code/dotfiles"
+        force: yes
+
+    - name: Copy nvim to config directory recursively
+      ansible.builtin.copy:
+        src: "{{ ansible_env.HOME }}/code/dotfiles/nvim"
+        dest: "{{ ansible_env.HOME }}/.config"
+        remote_src: yes
+        force: yes
+
+    - name: Copy fish config
+      ansible.builtin.copy:
+        src: "{{ ansible_env.HOME }}/code/dotfiles/fish/config.fish"
+        dest: "{{ ansible_env.HOME }}/.config/fish/config.fish"
+        remote_src: yes
+        force: yes
+
+    - name: Copy tmux config
+      ansible.builtin.copy:
+        src: "{{ ansible_env.HOME }}/code/dotfiles/tmux/.tmux.conf"
+        dest: "{{ ansible_env.HOME }}/.tmux.conf"
+        remote_src: yes
+        force: yes
