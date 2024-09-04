@@ -41,6 +41,15 @@
           - chardet
         state: latest
 
+    - name: Add /usr/bin/fish to /etc/shells
+      shell: echo "/usr/bin/fish" | sudo tee -a /etc/shells
+
+    - name: Change default shell to fish
+      shell: chsh -s /usr/bin/fish {{ ansible_env.USER }}
+      become: yes
+      args:
+        executable: /usr/bin/fish
+
 - import_playbook: shell_installations.yaml
 - import_playbook: configure_shell.yaml
 - import_playbook: import_dotfiles.yaml
