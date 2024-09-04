@@ -1,9 +1,3 @@
-# Start ssh-agent on start of wsl2
-if test -z "$SSH_AUTH_SOCK"
-    eval (ssh-agent -c)
-    ssh-add ~/.ssh/id_rsa
-end
-
 ### ALIASES ###
 alias vim='nvim'
 
