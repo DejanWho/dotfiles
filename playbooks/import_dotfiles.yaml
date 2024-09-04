@@ -2,12 +2,6 @@
 - name: Install tools via shell on ubuntu
   hosts: localhost
   tasks: 
-    - name: Clone dotfiles repository 
-      git:
-        repo: https://github.com/DejanWho/dotfiles.git
-        dest: "{{ ansible_env.HOME }}/code/dotfiles"
-        force: yes
-
     - name: Copy nvim to config directory recursively
       ansible.builtin.copy:
         src: "{{ ansible_env.HOME }}/code/dotfiles/nvim"
