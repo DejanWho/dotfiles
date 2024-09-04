@@ -1,0 +1,47 @@
+---
+- name: Install tools on Ubuntu WSL
+  hosts: localhost
+  become: yes
+  tasks:    
+    - name: Add Neovim PPA
+      apt_repository:
+        repo: ppa:neovim-ppa/unstable
+        state: present
+
+    - name: Update apt cache
+      apt:
+        update_cache: yes
+    
+    - name: Install tools
+      apt:
+        name: 
+          - python3
+          - python3-pip
+          - git
+          - fish
+          - tmux
+          - htop
+          - btop
+          - bat
+          - fzf
+          - fd-find
+          - ripgrep
+          - gcc
+          - nodejs
+          - npm
+          - neovim
+          - dotnet-sdk-8.0
+          - aspnetcore-runtime-8.0
+          - dotnet-runtime-8.0
+        state: present
+
+    - name: Upgrade libs
+      pip:
+        name: 
+          - urllib3
+          - chardet
+        state: latest
+
+- import_playbook: shell_installations.yaml
+- import_playbook: configure_shell.yaml
+- import_playbook: import_dotfiles.yaml
