@@ -10,10 +10,10 @@ alias l.='eza -a | egrep "^\."'
 
 ### EXPORT ###
 set fish_greeting # Supresses fish's intro message
-set TERM xterm-256color # Sets the terminal type
+#set -gx TERM xterm-256color # Sets the terminal type
 
 ### Theme
-theme_tokyonight storm
+# theme_tokyonight storm
 
 ### "nvim" as manpager
 set -x MANPAGER "nvim +Man!"
@@ -32,6 +32,4 @@ alias pscpu='ps auxf | sort -nr -k 3'
 # get error messages from journalctl
 alias jctl="journalctl -p 3 -xb"
 
-function fish_prompt
-    fishline -s $status
-end
+starship init fish | source

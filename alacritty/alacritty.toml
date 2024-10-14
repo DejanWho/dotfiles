@@ -1,33 +1,29 @@
 [shell]
-program = "/bin/fish"
+program = "/usr/bin/fish"
 
 [colors]
 draw_bold_text_with_bright_colors = true
-
-import = [
-    "~/.config/alacritty/themes/themes/tokyo-night-storm.toml"
-]
 
 [env]
 TERM = "xterm-256color"
 
 [font]
-size = 16.0
+size = 13.0
 
 [font.bold]
-family = "Source Code Pro"
+family = "SauceCodePro Nerd Font"
 style = "Bold"
 
 [font.bold_italic]
-family = "Source Code Pro"
+family = "SauceCodePro Nerd Font"
 style = "Bold Italic"
 
 [font.italic]
-family = "Source Code Pro"
+family = "SauceCodePro Nerd Font"
 style = "Italic"
 
 [font.normal]
-family = "Source Code Pro"
+family = "SauceCodePro Nerd Font"
 style = "Regular"
 
 [font.offset]
@@ -123,7 +119,7 @@ history = 5000
 
 [window]
 dynamic_padding = false
-# opacity = 0.9
+opacity = 0.9
 title = "Alacritty"
 
 [window.class]
@@ -131,6 +127,6 @@ general = "Alacritty"
 instance = "Alacritty"
 
 [window.dimensions]
-columns = 140
-lines = 40
+columns = 160
+lines = 44
 
