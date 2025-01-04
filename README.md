@@ -10,31 +10,41 @@ Current dot files configurations.
 
 ## Package Managers
 
-- for tmux: https://github.com/tmux-plugins/tpm
-- for fish: https://github.com/jorgebucaran/fisher
 
-### Fish packages
-
-#### Tokyo Night theme
-
+## zsh packages
+Create following folders:
 ```shell
-fisher install axkirillov/tokyonight-fish
-```
-Add this to the config.fish to enable the theme:
-```shell
-theme_tokyonight storm
+mkdir .config/zsh
 ```
 
-#### Install fishline
+and
 
 ```shell
-fisher install 0rax/fishline
-```
-## Install alacritty themes
-```shell
-git clone https://github.com/alacritty/alacritty-theme ~/.config/alacritty/themes
+mkdir .config/zsh/plugins
 ```
 
+Clone this packages into the plugins folder:
+```shell
+git clone https://github.com/romkatv/powerlevel10k.git
+git clone https://github.com/zdharma/fast-syntax-highlighting.git
+git clone https://github.com/zsh-users/zsh-autosuggestions.git
+git clone https://github.com/zsh-users/zsh-history-substring-search.git
+git clone https://github.com/jeffreytse/zsh-vi-mode.git
+```
+```
+
+Add this content to the file `/etc/zsh/zshenv`
+```shell
+if [[ -z "$XDG_CONFIG_HOME" ]] 
+then
+	export XDG_CONFIG_HOME="$HOME/.config/"
+fi
+
+if [[ -d "$XDG_CONFIG_HOME/zsh" ]] 
+then
+	export ZDOTDIR="$XDG_CONFIG_HOME/zsh/"
+fi
+```
 
 ## Dependencies
 - fzf
