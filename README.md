@@ -26,14 +26,14 @@ mkdir .config/zsh/plugins
 Clone this packages into the plugins folder:
 ```shell
 git clone https://github.com/romkatv/powerlevel10k.git
-git clone https://github.com/zdharma/fast-syntax-highlighting.git
+git clone https://github.com/zdharma-continuum/fast-syntax-highlighting.git
 git clone https://github.com/zsh-users/zsh-autosuggestions.git
 git clone https://github.com/zsh-users/zsh-history-substring-search.git
 git clone https://github.com/jeffreytse/zsh-vi-mode.git
 ```
-```
 
 Add this content to the file `/etc/zsh/zshenv`
+
 ```shell
 if [[ -z "$XDG_CONFIG_HOME" ]] 
 then
