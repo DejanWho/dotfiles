@@ -1,3 +1,4 @@
+--[[
 return {
   -- add theme
   {
@@ -11,7 +12,7 @@ return {
     },
   },
 
-  -- Configure LazyVim to load gruvbox
+  -- Configure LazyVim to load tokyonight
   {
     "LazyVim/LazyVim",
     opts = {
@@ -19,8 +20,8 @@ return {
     },
   },
 }
-
---[[
+]]
+--
 return {
   -- add gruvbox
   {
@@ -37,6 +38,4 @@ return {
       colorscheme = "gruvbox",
     },
   },
-} 
-]]
---
+}
